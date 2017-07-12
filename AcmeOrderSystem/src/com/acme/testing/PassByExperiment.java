@@ -8,7 +8,7 @@ public class PassByExperiment {
 	public static void main(String[] args){
 		
 		
-		
+		StringBuilder sb = new StringBuilder();
 		MyDate date = new MyDate(1,20,2008);
 		MyDate date2 = new MyDate(2,5,2008);
 		System.out.println("Before passing an object " + date);
@@ -20,9 +20,13 @@ public class PassByExperiment {
 		String x = date.toString();
 		System.out.println("Before passing a String " + x);
 		passString(x);
+		sb.append(date2.toString());
 		System.out.println("After passing a String " + x);
-		StringBuilder sb = new StringBuilder();	
-		sb.append(date2);
+		System.out.println("Before passing a StringBuilder " + sb);
+		passStringBuilder(sb);
+		System.out.println("After passing a StringBuilder " + sb);
+		
+		
 		
 		
 		
@@ -42,8 +46,10 @@ public class PassByExperiment {
 			System.out.println("New date string: " + s);
 			
 		}
-		public static void passStringBuilder(){
-			
+		public static void passStringBuilder(StringBuilder sb ){
+			int yearSlash = sb.lastIndexOf("/");
+			sb = sb.replace(yearSlash + 1, sb.length(), "2012");
+					
 		}
 }
 

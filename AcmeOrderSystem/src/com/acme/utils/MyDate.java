@@ -39,7 +39,7 @@ public class MyDate {
 		}
 	}
 	public boolean valid(int month, int day, int year){
-		if (day > 31 || day <1 || month > 12 || month < 1){
+		if ( month > 12 || month < 1 || day > 31 || day <1 || year < 1900 || year > 2017 ){
 			System.out.println(("attempting to create a non-valid date " + month + "/" + day + "/" + year));
 			return false;
 		}

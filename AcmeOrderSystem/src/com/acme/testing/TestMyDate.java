@@ -12,7 +12,7 @@ public class TestMyDate {
 			date2.setYear(1918);
 		
 		MyDate date3 = new MyDate();
-		date3.setDate(12, 40, 2017);
+		date3.setDate(12, 31, 2020);
 		
 				
 		String str1 = date1.toString();

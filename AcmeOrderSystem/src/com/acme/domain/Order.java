@@ -3,10 +3,10 @@ import com.acme.utils.MyDate;
 
 public class Order {
 	MyDate orderDate;
-	double orderAmount = 0.00;
-	String customer;
-	String product;
-	int quantity;
+	private double orderAmount = 0.00;
+	private String customer;
+	private String product;
+	private int quantity;
 	public static double taxRate;
 	
 	static{
@@ -16,11 +16,14 @@ public class Order {
 	
 	
 	public Order(MyDate d, double amt, String c, String p, int q){
-		orderDate=d;
-		orderAmount=amt;
-		customer=c;
-		product=p;
-		quantity=q;
+		if (validOrderAmount(amt)){
+			orderDate=d;
+			orderAmount=amt;
+			customer=c;
+			product=p;
+			quantity=q;
+		}
+
 	}
 	public Order(MyDate d, double amt, String c){
 		this(d, amt, c, "Anvil", 1);
@@ -71,4 +74,36 @@ public class Order {
 		
 		return orderTotal;
 	}
+	public boolean validOrderAmount(double orderAmount){
+		if (orderAmount < 0){
+			System.out.println("attempting to create a non-valid Order Amount " + orderAmount);
+			return false;
+		}
+		return true;
+	}
+	public double getOrderAmount() {
+		return orderAmount;
+	}
+	public void setOrderAmount(double orderAmount) {
+		this.orderAmount = orderAmount;
+	}
+	public String getCustomer() {
+		return customer;
+	}
+	public void setCustomer(String customer) {
+		this.customer = customer;
+	}
+	public String getProduct() {
+		return product;
+	}
+	public void setProduct(String product) {
+		this.product = product;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	
 }

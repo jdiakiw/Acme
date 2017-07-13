@@ -20,8 +20,8 @@ public class PassByExperiment {
 		String x = date.toString();
 		System.out.println("Before passing a String " + x);
 		passString(x);
-		sb.append(date2.toString());
 		System.out.println("After passing a String " + x);
+		sb.append(date2.toString());
 		System.out.println("Before passing a StringBuilder " + sb);
 		passStringBuilder(sb);
 		System.out.println("After passing a StringBuilder " + sb);

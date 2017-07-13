@@ -20,8 +20,7 @@ public class TestConversionService {
 		ConversionService.fluidOunces(1.1f);
 		ConversionService.grams(30);
 		ConversionService.milliliters(4);
-		short grams = (short) ConversionService.grams(30);
-		byte byteGrams = (byte) ConversionService.grams(30);
+		
 
 		
 		System.out.println("------------------------------------");

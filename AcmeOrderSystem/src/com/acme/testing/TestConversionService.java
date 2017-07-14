@@ -20,6 +20,10 @@ public class TestConversionService {
 		ConversionService.fluidOunces(1.1f);
 		ConversionService.grams(30);
 		ConversionService.milliliters(4);
+<<<<<<< HEAD
+=======
+		
+>>>>>>> refs/remotes/origin/Test
 
 		System.out.println("------------------------------------");
 		double ounces = ConversionService.fluidOunces(1.1f);

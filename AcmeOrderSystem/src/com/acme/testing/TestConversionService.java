@@ -20,10 +20,7 @@ public class TestConversionService {
 		ConversionService.fluidOunces(1.1f);
 		ConversionService.grams(30);
 		ConversionService.milliliters(4);
-		short grams = (short) ConversionService.grams(30);
-		byte byteGrams = (byte) ConversionService.grams(30);
 
-		
 		System.out.println("------------------------------------");
 		double ounces = ConversionService.fluidOunces(1.1f);
 		System.out.println(ounces);
@@ -41,23 +38,19 @@ public class TestConversionService {
 		System.out.println(ConversionService.ounces(50.5f));
 		System.out.println(ConversionService.pints(6L));
 		System.out.println(ConversionService.pounds(7.0));
-		
 
-	
 		System.out.println("------------------------------------");
 		float bigGallons = ConversionService.gallons(123456789123456789L);
 		System.out.println(bigGallons);
 		double bigGallons2 = 123456789123456789L * 0.2642;
 		System.out.println(bigGallons2);
-		
 
-	
 		System.out.println("------------------------------------");
 		int bigGrams = ConversionService.grams(1234567890);
 		System.out.println(bigGrams);
 		long bigGrams2 = 1234567890L * 1000L;
 		System.out.println(bigGrams2);
-		
+
 	}
 
 }

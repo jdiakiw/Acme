@@ -1,7 +1,5 @@
 package com.acme.utils;
 
-
-
 public class ConversionService {
 
 	/**
@@ -34,8 +32,7 @@ public class ConversionService {
 	/**
 	 * METHODS
 	 */
-	
-	
+
 	public static Double pounds(Double kilograms) {
 		return kilograms * kilogramToPounds;
 	}

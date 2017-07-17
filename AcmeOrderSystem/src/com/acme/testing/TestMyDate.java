@@ -15,6 +15,13 @@ public class TestMyDate {
 		MyDate date3 = new MyDate();
 		date3.setDate(12, 31, 2020);
 
+		MyDate newYear = new MyDate(1,1,2018);
+		MyDate fiscalStart = new MyDate(1,1,2018);
+		if(newYear.equals(fiscalStart))
+			System.out.println("These two dates are equal");
+		else
+			System.out.println("These two dates are not equal");
+		
 		String str1 = date1.toString();
 		String str2 = date2.toString();
 		String str3 = date3.toString();

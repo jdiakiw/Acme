@@ -23,6 +23,17 @@ public class TestOrders {
 		MyDate date3 = new MyDate(5, 20, 2008);
 		Solid s3 = new Solid("Acme Anvil", 1668, 0.3, UnitOfMeasureType.CUBIC_METER, false, 500, 0.25, 0.3);
 		Order anotherAnvil = new Order(date3, 20, "Road Runner", s3);
+		
+		MyDate newYear = new MyDate(1,1,2009);
+		MyDate fiscalStart = new MyDate(1,1,2009);
+		
+		if (newYear.equals(fiscalStart)){
+			System.out.println("These two dates are equal");
+		}
+		else
+			System.out.println("These two dates are not equal");
+		
+	
 
 		System.out.println(anvil);
 		System.out.println(balloons);

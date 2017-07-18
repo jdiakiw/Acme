@@ -30,7 +30,7 @@ public class TestMyDate {
 		System.out.println(str2);
 		System.out.println(str3);
 
-		MyDate.leapYears();
+		//MyDate.leapYears();
 
 	}
 

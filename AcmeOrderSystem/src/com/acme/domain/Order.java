@@ -27,6 +27,9 @@ public class Order {
 		this(d, amt, c, p, 1);
 
 	}
+	public Order(){
+		
+	}
 
 	public String toString() {
 		return quantity + " ea. " + product + " for " + customer;

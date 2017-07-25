@@ -6,15 +6,18 @@ public class Order {
 	MyDate orderDate;
 	private double orderAmount = 0.00;
 	private String customer;
-	private Good product;
+	private Product product;
 	private int quantity;
 	public static double taxRate;
+	private static Rushable rushable;
+	
+	
 
 	static {
 		taxRate = 0.05;
 	}
 
-	public Order(MyDate d, double amt, String c, Good p, int q) {
+	public Order(MyDate d, double amt, String c, Product p, int q) {
 		orderDate = d;
 		orderAmount = amt;
 		customer = c;
@@ -23,7 +26,7 @@ public class Order {
 
 	}
 
-	public Order(MyDate d, double amt, String c, Good p) {
+	public Order(MyDate d, double amt, String c, Product p) {
 		this(d, amt, c, p, 1);
 
 	}
@@ -82,8 +85,8 @@ public class Order {
 	}
 
 	public boolean validOrderAmount(double orderAmount) {
-		if (orderAmount < 0) {
-			System.out.println("attempting to create a non-valid Order Amount " + orderAmount);
+		if (orderAmount <= 0) {
+			System.out.println("Attempting to set the quantity to a value less than or equal to zero " + orderAmount);
 			return false;
 		}
 		return true;
@@ -95,6 +98,14 @@ public class Order {
 			return false;
 		}
 		return true;
+	}
+	
+	public boolean isPriorityOrder(){
+		boolean priorityOrder = false;
+		if (rushable != null){
+			priorityOrder = rushable.isRushable(orderDate, orderAmount);
+		}
+		return priorityOrder;
 	}
 
 	public double getOrderAmount() {
@@ -116,11 +127,11 @@ public class Order {
 		this.customer = customer;
 	}
 
-	public Good getProduct() {
+	public Product getProduct() {
 		return product;
 	}
 
-	public void setProduct(Good product) {
+	public void setProduct(Product product) {
 		this.product = product;
 	}
 
@@ -133,6 +144,12 @@ public class Order {
 			this.quantity = quantity;
 		}
 		
+	}
+	public static Rushable getRushable(){
+		return rushable;
+	}
+	public static void setRushable(Rushable rushable){
+		Order.rushable = rushable;
 	}
 
 }

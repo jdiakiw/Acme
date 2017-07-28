@@ -4,11 +4,23 @@ public class MyDate {
 	private byte month;
 	private byte day;
 	private short year;
+	private static MyDate[] holidays;
 
 	{
 		month = 1;
 		day = 1;
 		year = 2000;
+	}
+	
+	static{
+		holidays = new MyDate[6];
+		holidays[0] = new MyDate(1, 1, 2017);
+		holidays[1] = new MyDate(5, 30, 2017);
+		holidays[2] = new MyDate(7, 4, 2017);
+		holidays[3] = new MyDate(9, 5, 2017);
+		holidays[4] = new MyDate(11, 24, 2017);
+		holidays[5] = new MyDate(12, 25, 2017);
+		
 	}
 
 	public MyDate() {
@@ -63,6 +75,14 @@ public class MyDate {
 		}
 		return false;
 	}
+	
+	public static void listHolidays(){
+		System.out.println("The Holidays Are:");
+		for (MyDate holiday : holidays){
+			System.out.println(holiday);
+			
+		}
+	}
 
 	public String toString() {
 		return month + "/" + day + "/" + year;
@@ -98,7 +118,10 @@ public class MyDate {
 		if (valid(month, day, year)) {
 			this.year = (short) year;
 		}
-
+	}
+	
+	public static MyDate[] getHolidays() {
+		return holidays;
 	}
 
 }

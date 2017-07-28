@@ -8,7 +8,7 @@ public class TestConversionService {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println(ConversionService.fluidOunces(1.1f));
+/*		System.out.println(ConversionService.fluidOunces(1.1f));
 		System.out.println(ConversionService.gallons(2.2f));
 		System.out.println(ConversionService.grams(30));
 		System.out.println(ConversionService.milliliters(40));
@@ -50,7 +50,7 @@ public class TestConversionService {
 		System.out.println(bigGrams);
 		long bigGrams2 = 1234567890L * 1000L;
 		System.out.println(bigGrams2);
-		
+		*/
 		double[][] results = ConversionService.allKgToPounds(14.0, 29.0,
 				6.5, 7.7);
 				for (double[] result : results) {

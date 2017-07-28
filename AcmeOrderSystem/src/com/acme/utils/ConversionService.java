@@ -62,22 +62,18 @@ public class ConversionService {
 	}
 
 	public static double[][] allKgToPounds(double...kilogramValues ) {
-		double[] kilogram = kilogramValues;
-		for (double[] kilogram : ){
-			
-		}
+		double[][] newArr = new double [kilogramValues.length][2];
 		
-
-	double[][] newArr = new double[kilogramValues.length] [2];
-
-		for (int i = 0; i < kilogramValues.length; i++) {
-					
-
-			for (int j = 0; j < kilogramValues.length; j++) {
-
-				newArr[i][] = kilogramValues;
-			}
+			for (int i = 0; i < kilogramValues.length; i++){
+				
+				newArr[i][0] = kilogramValues[i];
+				newArr[i][1] = pounds(kilogramValues[i]);
+/*			double x = pounds(kilogramValues[i]);
+			System.out.println("Kilogram values " + kilogramValues[i]);
+			System.out.println(x);
+			System.out.println(newArr[i]);*/
 		}
+	
 		return newArr;
 
 	}

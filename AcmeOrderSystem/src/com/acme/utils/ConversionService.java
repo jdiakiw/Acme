@@ -68,10 +68,6 @@ public class ConversionService {
 				
 				newArr[i][0] = kilogramValues[i];
 				newArr[i][1] = pounds(kilogramValues[i]);
-/*			double x = pounds(kilogramValues[i]);
-			System.out.println("Kilogram values " + kilogramValues[i]);
-			System.out.println(x);
-			System.out.println(newArr[i]);*/
 		}
 	
 		return newArr;

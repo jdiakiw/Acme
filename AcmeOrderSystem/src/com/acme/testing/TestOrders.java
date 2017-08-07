@@ -23,7 +23,7 @@ public class TestOrders {
 		Solid s1 = new Solid("Acme Anvil", 1668, 0.3, UnitOfMeasureType.CUBIC_METER, false, 500, 0.25, 0.3);
 		Order anvil = new Order(date1, 2000.00, "Wile E Coyote", s1, 10);
 
-		/*MyDate date2 = new MyDate(4, 10, 2008);
+		MyDate date2 = new MyDate(4, 10, 2008);
 		Solid s2 = new Solid("Acme Balloons", 1401, 15, UnitOfMeasureType.CUBIC_FEET, false, 10, 5, 5);
 		Order balloons = new Order(date2, 1000.00, "Bugs Bunny", s2, 125);
 
@@ -38,36 +38,36 @@ public class TestOrders {
 		
 		MyDate hammerDate = new MyDate (7,10,2017);
 		Solid hammerType = new Solid("Acme Hammer", 281, 0.3, UnitOfMeasureType.CUBIC_METER, false, 100, 0.25, 0.3);
-		Order hammer = new Order(hammerDate, 10.00, "Wile E Coyote", hammerType, 10);*/
+		Order hammer = new Order(hammerDate, 10.00, "Wile E Coyote", hammerType, 10);
 		
-		//MyDate newYear = new MyDate(1,1,2009);
-		//MyDate fiscalStart = new MyDate(1,1,2009);
+		MyDate newYear = new MyDate(1,1,2009);
+		MyDate fiscalStart = new MyDate(1,1,2009);
 		
-/*		if (newYear.equals(fiscalStart)){
+		if (newYear.equals(fiscalStart)){
 			System.out.println("These two dates are equal");
 		}
 		else
-			System.out.println("These two dates are not equal");*/
+			System.out.println("These two dates are not equal");
 		
 	
 
-		//System.out.println(anvil);
-		//System.out.println(balloons);
-		//System.out.println(anotherAnvil);
-		//System.out.println(hammer);
-		//System.out.println("The tax Rate is currently: " + Order.taxRate);
-		//Order.computeTaxOn(3000.00);
-		//anvil.computeTax();
-		//balloons.computeTax();
+		System.out.println(anvil);
+		System.out.println(balloons);
+		System.out.println(anotherAnvil);
+		System.out.println(hammer);
+		System.out.println("The tax Rate is currently: " + Order.taxRate);
+		Order.computeTaxOn(3000.00);
+		anvil.computeTax();
+		balloons.computeTax();
 
 		Order.setTaxRate(0.06);
-		//System.out.println("The tax Rate is currently: " + Order.taxRate);
-		//Order.computeTaxOn(3000.00);
-		//anvil.computeTax();
-		//balloons.computeTax();
-		//anotherAnvil.computeTax();
-		//balloons.setQuantity(-200);
-		//balloons.setOrderAmount(-250.00);
+		System.out.println("The tax Rate is currently: " + Order.taxRate);
+		Order.computeTaxOn(3000.00);
+		anvil.computeTax();
+		balloons.computeTax();
+		anotherAnvil.computeTax();
+		balloons.setQuantity(-200);
+		balloons.setOrderAmount(-250.00);
 		
 
 		//System.out.println("The total bill for: " + anvil + " is " + anvil.computeTotal());

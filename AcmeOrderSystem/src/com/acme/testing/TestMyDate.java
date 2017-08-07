@@ -5,7 +5,7 @@ import com.acme.utils.MyDate;
 public class TestMyDate {
 
 	public static void main(String[] args) {
-/*		MyDate date1 = new MyDate(11, 11, 1918);
+		MyDate date1 = new MyDate(11, 11, 1918);
 
 		MyDate date2 = new MyDate();
 		date2.setMonth(11);
@@ -28,7 +28,7 @@ public class TestMyDate {
 
 		System.out.println(str1);
 		System.out.println(str2);
-		System.out.println(str3);*/
+		System.out.println(str3);
 
 		//MyDate.leapYears();
 		
